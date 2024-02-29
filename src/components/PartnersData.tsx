@@ -5,10 +5,10 @@ const PartnersData = () => {
 
   return (
     <>
-      <div id="partners-table">
+      <div id="partners-table" className="border rounded-lg border-gray-300 ">
         <table className="w-full">
           <thead>
-            <tr>
+            <tr className="bg-gray-300">
               <th className="border border-gray-300 px-4 py-2">Partner ID</th>
               <th className="border border-gray-300 px-4 py-2">Partner Name</th>
             </tr>
