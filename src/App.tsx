@@ -17,32 +17,8 @@ export const App = () => {
         <main className="w-full sm:w-3/4 p-4">
           <div>
             <h1 className="text-xl font-semibold mb-4">Main Content</h1>
-            <PartnersData />
             <div className="overflow-x-auto">
-              <table className="w-full">
-                <thead>
-                  <tr>
-                    <th className="border border-gray-300 px-4 py-2">
-                      Partner Id
-                    </th>
-                    <th className="border border-gray-300 px-4 py-2">
-                      Partner Name
-                    </th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {[...Array(5)].map((_, index) => (
-                    <tr key={index}>
-                      <td className="border border-gray-300 px-4 py-2">
-                        Row {index + 1}, Col 1
-                      </td>
-                      <td className="border border-gray-300 px-4 py-2">
-                        Row {index + 1}, Col 2
-                      </td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
+              <PartnersData />
             </div>
           </div>
         </main>
