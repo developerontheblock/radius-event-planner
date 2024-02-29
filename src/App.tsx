@@ -23,10 +23,10 @@ export const App = () => {
                 <thead>
                   <tr>
                     <th className="border border-gray-300 px-4 py-2">
-                      Column 1
+                      Partner Id
                     </th>
                     <th className="border border-gray-300 px-4 py-2">
-                      Column 2
+                      Partner Name
                     </th>
                   </tr>
                 </thead>
