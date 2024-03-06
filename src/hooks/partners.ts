@@ -1,13 +1,5 @@
 import { useEffect, useState } from "react";
-
-type Partner = {
-  id: string;
-  name: string;
-  coordinates: {
-    latitude: number;
-    longitude: number;
-  };
-};
+import { Partner } from "../components/types/partner";
 
 export const usePartnersData = () => {
   const [partnersData, setPartnersData] = useState<Partner[]>([]);
