@@ -22,7 +22,7 @@ describe("Footer", () => {
       "bg-gray-800 text-white py-4 text-center mt-auto"
     );
 
-    const containerDiv = footerElement.querySelector(".container.mx-auto");
+    const containerDiv = footerElement.querySelector(".mx-auto");
     expect(containerDiv).toBeInTheDocument();
   });
 });

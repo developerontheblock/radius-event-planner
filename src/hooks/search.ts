@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Partner } from "../components/types/partner";
 
-const useSearch = (initialPartners: Partner[]) => {
+export const useSearch = (initialPartners: Partner[]) => {
   const [searchTerm, setSearchTerm] = useState("");
   const [filteredPartners, setFilteredPartners] =
     useState<Partner[]>(initialPartners);
@@ -15,5 +15,3 @@ const useSearch = (initialPartners: Partner[]) => {
 
   return { searchTerm, setSearchTerm, filteredPartners };
 };
-
-export default useSearch;

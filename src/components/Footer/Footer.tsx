@@ -6,7 +6,7 @@ const Footer = () => {
       data-testid="footer"
       className="bg-gray-800 text-white py-4 text-center mt-auto"
     >
-      <div className="container mx-auto">
+      <div className="mx-auto">
         <p>&copy; {currentYear}</p>
       </div>
     </footer>

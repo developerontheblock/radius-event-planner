@@ -1,15 +1,19 @@
+import "@testing-library/jest-dom";
 import { render, screen } from "@testing-library/react";
 import TotalRecords from "./TotalRecords";
-import * as dataProvider from "../PartnersData/DataProvider";
+import { useData } from "../../hooks";
 
-jest.mock("../PartnersData/DataProvider", () => ({
+jest.mock("../../hooks", () => ({
   useData: jest.fn(),
 }));
 
+const useDataMock = jest.mocked(useData);
+
 describe("TotalRecords component", () => {
   it("displays the record count correctly", () => {
-    (dataProvider.useData as jest.Mock).mockImplementation(() => ({
+    useDataMock.mockImplementation(() => ({
       recordCount: 5,
+      setRecordCount: jest.fn(),
     }));
 
     render(<TotalRecords />);
