@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 import { Partner } from "../components/types/partner";
+import { calculateDistance } from "./distance";
 
-export const usePartnersData = () => {
+export const usePartnersData = (filterDistance: number) => {
   const [partnersData, setPartnersData] = useState<Partner[]>([]);
 
   useEffect(() => {
@@ -23,10 +24,25 @@ export const usePartnersData = () => {
           };
           return partner;
         });
-        setPartnersData(parsedPartners);
+
+        const filteredPartners = parsedPartners.filter((partner: Partner) => {
+          return (
+            calculateDistance(
+              partner.coordinates.latitude,
+              partner.coordinates.longitude
+            ) <= filterDistance
+          );
+        });
+
+        const sortedPartners = filteredPartners.sort(
+          (a: Partner, b: Partner) => {
+            return parseInt(a.id) - parseInt(b.id);
+          }
+        );
+        setPartnersData(sortedPartners);
       })
       .catch((error) => console.error("Error fetching partners data:", error));
-  }, []);
+  }, [filterDistance]);
 
   return partnersData;
 };
