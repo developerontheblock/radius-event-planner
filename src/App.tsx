@@ -1,8 +1,10 @@
-import Footer from "./components/Footer";
-import Header from "./components/Header";
-import PartnersData from "./components/PartnersData";
-import { CalendarComponent } from "./components/CalendarComponent";
-import ScrollToTopButton from "./components/ScrollToTopButton";
+import Footer from "./components/Footer/Footer";
+import Header from "./components/Header/Header";
+import PartnersData from "./components/PartnersData/PartnersData";
+import ScrollToTopButton from "./components/ScrollToTopButton/ScrollToTopButton";
+import { DataProvider } from "./components/PartnersData/DataProvider";
+import TotalRecords from "./components/Table/TotalRecords";
+import Sidebar from "./components/Sidebar/Sidebar";
 
 export const App = () => {
   return (
@@ -13,19 +15,14 @@ export const App = () => {
       >
         <Header title="Radius Event Planner" />
         <div className="flex-grow flex flex-wrap">
-          <div className="bg-gray-300 w-full sm:w-1/4 p-4">
-            <h2 className="text-lg font-semibold mb-2">Event Details</h2>
-            <p className="mb-4">Title: company’s birthday celebration.</p>
-            <p className="mb-4">Where: Office</p>
-            <p className="mb-4">When: 15th April</p>
-            <CalendarComponent />
-          </div>
+          <Sidebar />
           <main className="w-full sm:w-3/4 p-4">
-            <div>
-              <h1 className="text-xl font-semibold mb-4">Main Content</h1>
-              <div className="overflow-x-auto">
+            <h1 className="text-xl font-semibold mb-4">Partners Data</h1>
+            <div className="overflow-x-auto">
+              <DataProvider>
                 <PartnersData />
-              </div>
+                <TotalRecords />
+              </DataProvider>
             </div>
           </main>
         </div>
