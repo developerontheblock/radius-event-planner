@@ -34,7 +34,7 @@ const EventDropdown = () => {
   };
 
   return (
-    <div className="items-center w-full">
+    <div className="items-center w-full pt-2">
       <select
         value={selectedEventId}
         onChange={handleChange}
