@@ -38,7 +38,7 @@ const EventDropdown = () => {
       <select
         value={selectedEventId}
         onChange={handleChange}
-        className="border-gray-300 rounded-md p-2 w-full max-w-xs sm:max-w-md md:max-w-lg lg:max-w-xl"
+        className="border-gray-300 rounded-md p-2 w-full sm:max-w-md md:max-w-lg lg:max-w-xl"
       >
         {events.map((event) => (
           <option key={event.id} value={event.id}>

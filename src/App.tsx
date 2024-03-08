@@ -11,12 +11,12 @@ export const App = () => {
     <>
       <div
         id="app"
-        className="flex flex-col min-h-screen bg-gray-100 text-gray-900"
+        className="grid grid-rows-[auto_1fr_auto] min-h-screen bg-gray-100 text-gray-900"
       >
         <Header title="Radius Event Planner" />
-        <div className="flex-grow flex flex-wrap">
+        <div className="grid grid-cols-1 sm:grid-cols-4">
           <Sidebar />
-          <main className="w-full sm:w-3/4 p-4">
+          <div className="col-span-1 sm:col-span-3 p-4 h-[500px] sm:h-auto overflow-y-auto">
             <h1 className="text-xl font-semibold mb-4">Partners Data</h1>
             <div className="overflow-x-auto">
               <DataProvider>
@@ -24,7 +24,7 @@ export const App = () => {
                 <TotalRecords />
               </DataProvider>
             </div>
-          </main>
+          </div>
         </div>
         <ScrollToTopButton />
         <Footer />
