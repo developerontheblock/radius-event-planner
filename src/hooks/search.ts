@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Partner } from "../components/types/partner";
+import { Partner } from "../types";
 
 export const useSearch = (initialPartners: Partner[]) => {
   const [searchTerm, setSearchTerm] = useState("");

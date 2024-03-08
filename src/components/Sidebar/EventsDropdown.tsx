@@ -34,7 +34,7 @@ const EventDropdown = () => {
   };
 
   return (
-    <div className="flex flex-col items-center w-full">
+    <div className="items-center w-full">
       <select
         value={selectedEventId}
         onChange={handleChange}

@@ -1,11 +1,11 @@
-interface SearchProps {
+type SearchProps = {
   searchTerm: string;
   setSearchTerm: (searchTerm: string) => void;
-}
+};
 
 const Search = ({ searchTerm, setSearchTerm }: SearchProps) => {
   return (
-    <div className="mb-4">
+    <div className="w-full mb-2">
       <input
         type="text"
         placeholder="Search partner by name..."

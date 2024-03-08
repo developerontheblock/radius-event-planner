@@ -4,8 +4,8 @@ const TotalRecords = () => {
   const { recordCount } = useData();
 
   return (
-    <div className="mt-4 mb-4 flex justify-center">
-      <div className="bg-blue-500 text-white py-2 px-4 rounded-full shadow">
+    <div className="grid place-items-center">
+      <div className="bg-blue-500 text-white mt-5 py-2.5 px-2.5 rounded-full shadow">
         Total Records: {recordCount}
       </div>
     </div>

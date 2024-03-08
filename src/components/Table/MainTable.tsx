@@ -1,4 +1,4 @@
-import { PartnerTableData } from "../types/partner";
+import { PartnerTableData } from "../../types";
 
 type MainTableProps = {
   partners: PartnerTableData[];

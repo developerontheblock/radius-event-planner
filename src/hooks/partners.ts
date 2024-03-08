@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import { Partner } from "../components/types/partner";
 import { calculateDistance } from "./distance";
+import { Partner } from "../types";
 
 export const usePartnersData = (filterDistance: number) => {
   const [partnersData, setPartnersData] = useState<Partner[]>([]);

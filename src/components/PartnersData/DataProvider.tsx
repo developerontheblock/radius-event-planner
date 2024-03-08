@@ -1,5 +1,5 @@
 import { createContext, useState } from "react";
-import { DataContextType, DataProviderProps } from "../types";
+import { DataContextType, DataProviderProps } from "../../types";
 
 export const DataContext = createContext<DataContextType | undefined>(
   undefined
