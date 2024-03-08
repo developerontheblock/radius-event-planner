@@ -60,3 +60,5 @@ npm test
 ##### Mobile version
 
 ![mobile-version](https://github.com/developerontheblock/radius-event-planner/assets/29116578/990afd15-23fb-4fc8-980a-edc40e9205ec)
+
+![distances](https://github.com/developerontheblock/radius-event-planner/assets/29116578/f1991f3a-3229-468c-85d6-86029fc01fe1)
